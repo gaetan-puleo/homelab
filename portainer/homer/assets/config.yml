@@ -1,0 +1,31 @@
+services:
+  - name: "Config"
+    items:
+      - name: "Portainer"
+        url: "http://portainer.lan"
+        type: Portainer
+        target: "_blank" # optional html tag target attribute
+      - name: "Pi hole"
+        url: 'http://pihole.lan/admin'
+        type: "Pihole"
+        target: "_blank" # optional html tag target attribute
+      - name: "NGinx Manager"
+        url: 'http://192.168.1.26:81'
+        target: "_blank" # optional html tag target attribute
+  - name: "Application"
+    icon: "fas fa-code-branch"
+    # A path to an image can also be provided. Note that icon take precedence if both icon and logo are set.
+    # logo: "path/to/logo"
+    items:
+      - name: "Feed"
+        url: 'http://feed.lan'
+        target: "_blank" # optional html tag target attribute
+     
+      - name: "Nextcloud"
+        url: 'http://nextcloud.lan/'
+        target: "_blank" # optional html tag target attribute
+      - name: "Gitea"
+        url: 'http://gitea.lan/'
+        target: "_blank" # optional html tag target attribute
+
+    
