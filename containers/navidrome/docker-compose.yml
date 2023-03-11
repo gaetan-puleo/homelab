@@ -1,3 +1,5 @@
+# This is just an example. Customize it to your needs.
+
 version: "3"
 services:
   navidrome:
@@ -9,6 +11,8 @@ services:
       ND_SCANSCHEDULE: 1h
       ND_LOGLEVEL: info  
       ND_BASEURL: ""
+      ND_ENABLETRANSCODINGCONFIG: true
     volumes:
       - "/mnt/nas/containers/navidrome/data:/data"
-      - "/mnt/nas/local/common/music/:/music:ro"
+      # - "/mnt/nas/local/common/music/:/music:ro"
+      - "/mnt/nas/mediatest/downloads:/music:ro"

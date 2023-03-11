@@ -9,7 +9,7 @@ services:
     environment:
       PUID: 1000
       PGID: 1000
-      TZ: Europe/Paris
+      TZ: America/Anchorage
 
       # Default Recipe Settings
       RECIPE_PUBLIC: 'true'
@@ -24,4 +24,5 @@ services:
       # WORKERS_PER_CORE: 0.5
       # MAX_WORKERS: 8
     volumes:
-      - "/mnt/nas/containers/mealie/data:/app/data"
+      - /mnt/nas/containers/mealie/data:/app/data/
+

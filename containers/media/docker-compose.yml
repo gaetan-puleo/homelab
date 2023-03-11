@@ -1,0 +1,109 @@
+version: "2.1"
+services:
+  # radarr:
+  #   image: lscr.io/linuxserver/radarr:latest
+  #   container_name: radarr
+  #   environment:
+  #     - PUID=1000
+  #     - PGID=100
+  #     - TZ='Europe/Paris'
+  #   volumes:
+  #     - /mnt/nas/containers/radarr/config:/config
+  #     - /mnt/nas/media/movies:/movies #optional
+  #     - /mnt/nas/media/downloads:/downloads #optional
+  #   ports:
+  #     - 7878:7878
+  #   restart: unless-stopped
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=100
+      - TZ=Europe/Paris
+    volumes:
+      - /mnt/nas/containers/sonarr/config:/config
+      - /mnt/nas/media/tvseries:/tv #optional
+      - /mnt/nas/media/downloads:/downloads #optional
+    ports:
+      - 8989:8989
+    restart: unless-stopped
+  # lidarr:
+  #   image: lscr.io/linuxserver/lidarr:latest
+  #   container_name: lidarr
+  #   environment:
+  #     - PUID=1000
+  #     - PGID=100
+  #     - TZ=Etc/UTC
+  #   volumes:
+  #     - /mnt/nas/containers/lidarr/config:/config
+  #     - /mnt/nas/media/music:/music #optional
+  #     - /mnt/nas/media/downloads:/downloads #optional
+  #   ports:
+  #     - 8686:8686
+  #   restart: unless-stopped
+  # readarr:
+  #   image: lscr.io/linuxserver/readarr:develop
+  #   container_name: readarr
+  #   environment:
+  #     - PUID=1000
+  #     - PGID=100
+  #     - TZ=Europe/Paris
+  #   volumes:
+  #     - /mnt/nas/containers/readarr/config:/config
+  #     - /mnt/nas/media/books:/books #optional
+  #     - /mnt/nas/media/downloads:/downloads #optional
+  #   ports:
+  #     - 8787:8787
+  #   restart: unless-stopped
+  # prowlarr:
+  #   image: lscr.io/linuxserver/prowlarr:latest
+  #   container_name: prowlarr
+  #   environment:
+  #     - PUID=1000
+  #     - PGID=100
+  #     - TZ=Europe/Paris
+  #   volumes:
+  #     - /mnt/nas/containers/prowlarr/config:/config
+  #   ports:
+  #     - 9696:9696
+  #   restart: unless-stopped
+  # transmission:
+  #   image: lscr.io/linuxserver/transmission:latest
+  #   container_name: transmission
+  #   environment:
+  #     - PUID=1000
+  #     - PGID=100
+  #     - TZ=Europe/Paris
+
+  #   volumes:
+  #     - /mnt/nas/containers/transmission/config:/config
+  #     - /mnt/nas/media/downloads:/downloads
+  #     - /mnt/nas/media/watch:/watch
+  #   ports:
+  #     - 9091:9091
+  #     - 51413:51413
+  #     - 51413:51413/udp
+  #   restart: unless-stopped
+  # jellyfin:
+  #   image: lscr.io/linuxserver/jellyfin:latest
+  #   container_name: jellyfin
+  #   environment:
+  #     - PUID=1000
+  #     - PGID=100
+  #     - TZ=Europe/Paris
+  #     - JELLYFIN_PublishedServerUrl=192.168.0.26 #optional
+  #   volumes:
+  #     - /mnt/nas/containers/jellyfin/config:/config
+  #     - /mnt/nas/media/tvseries:/data/tvshows
+  #     - /mnt/nas/media/music:/data/music #optional
+  #     - /mnt/nas/media/downloads:/data/downloads
+  #     - /mnt/nas/media/movies:/data/movies
+  #   ports:
+  #     - 8096:8096
+  #     - 8920:8920 #optional
+  #     - 7359:7359/udp #optional
+  #     - 1900:1900/udp #optional
+  #   restart: unless-stopped
+
+
