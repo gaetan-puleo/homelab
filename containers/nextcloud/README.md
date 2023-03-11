@@ -27,6 +27,7 @@ NEXTCLOUD_FOLDER_PATH=
 # timezone
 TZ=Europe/Paris
 
+BACKUP_DIR=./backup
 ```
 
 You need to fill all the fields
