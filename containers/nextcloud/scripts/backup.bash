@@ -24,5 +24,6 @@ docker compose exec -ti nextcloud-db mysqldump  --single-transaction -u ${MYSQL_
 
 docker compose exec --user www-data nextcloud php occ maintenance:mode --off 
 
+cp .env ${BACKUP_DIR}/.env.bak
 
 
